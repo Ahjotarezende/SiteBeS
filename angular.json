@@ -53,10 +53,19 @@
                   "maximumError": "4kb"
                 }
               ],
+              "optimization": {
+                "scripts": true,
+                 "styles": true,
+                 "fonts": false
+             },
               "outputHashing": "all"
             },
             "development": {
-              "optimization": false,
+              "optimization": {
+                "scripts": true,
+                 "styles": true,
+                 "fonts": false
+             },
               "extractLicenses": false,
               "sourceMap": true
             }
