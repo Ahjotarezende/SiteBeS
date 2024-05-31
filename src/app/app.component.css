@@ -1,0 +1,363 @@
+@keyframes animacao {
+  from {
+    height: 50px;
+  }
+  to {
+    height: 110px;
+  }
+}
+.header {
+  background: linear-gradient(
+    180deg,
+    rgba(46, 63, 98, 1) 0%,
+    rgba(0, 22, 57, 1) 100%
+  );
+  width: 100%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 8px 15px -3px rgba(0, 0, 0, 0.29);
+}
+
+.mobileHeader {
+  width: 100%;
+  box-shadow: 1px 9px 22px -6px rgba(0, 0, 0, 0.51);
+  padding: 0.5rem 0;
+  display: none;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.toolbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-container,
+.img-carousel {
+  width: 1160px;
+  height: 500px;
+  box-shadow: 0px 2px 22px -5px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+.img-carousel {
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.visao {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: justify;
+  max-width: 480px;
+}
+
+.background-black::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.48); /* Ajuste a cor e a opacidade do overlay */
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+.secondHeader {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: white;
+  width: 100%;
+  top: 0;
+  box-shadow: 0px 8px 15px -3px rgba(0, 0, 0, 0.29);
+  z-index: 10;
+}
+
+.photoDescMobile {
+  display: none;
+  font-size: 13px;
+}
+
+.balanca {
+  position: absolute;
+  left: 0;
+}
+
+.navegacao {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+a {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  font-weight: 200;
+}
+
+a:hover {
+  font-weight: 500;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.equipeCards {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.square {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background-color: transparent;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 1px -1px 21px -1px rgba(0, 0, 0, 0.42);
+  object-position: top;
+}
+
+mat-icon {
+  transform: scale(1.5);
+}
+
+.map {
+  width: 500px;
+  height: 400px;
+}
+
+.location {
+  display: flex;
+  border: 2px solid #c6a762;
+  border-radius: 10px;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.mostVisao {
+  display: none;
+}
+
+.map iframe {
+  box-shadow: 1px -1px 21px -1px rgba(0, 0, 0, 0.42);
+  width: 100%;
+  height: 100%;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 20px;
+}
+
+.info p {
+  margin: 0;
+  width: 400px;
+}
+
+.names {
+  font-size: 20px;
+  color: #c6a762;
+  font-weight: 600;
+}
+
+.descricao {
+  text-align: justify;
+  line-height: 1.5rem;
+  max-width: 325px;
+}
+
+.opcoesMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  animation-name: animacao;
+  animation-duration: 0.5s;
+}
+
+.equipe {
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px;
+  box-shadow: 0px 2px 22px -5px rgba(0, 0, 0, 0.8);
+  width: 650px;
+  height: 400px;
+}
+
+.footer {
+  margin-top: 5rem;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20rem;
+  background-color: #011639;
+  color: #fff;
+  text-align: center;
+}
+
+.footer img {
+  width: 400px;
+  height: 100px;
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    gap: 10rem;
+  }
+
+  .equipeCards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mostVisao {
+    display: initial;
+  }
+
+  .visaoText {
+    display: none;
+  }
+
+  .visao {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sobre {
+    max-width: 650px;
+  }
+
+  .location {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .map {
+    width: 650px;
+    height: 550px;
+  }
+
+  .equipe {
+    width: 650px;
+    height: 350px;
+  }
+
+  .info p {
+    margin: 0;
+    width: 650px;
+  }
+
+  .carousel-container,
+  .img-carousel {
+    width: 800px;
+    height: 600px;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer {
+    gap: 2rem;
+    font-size: 12px;
+  }
+
+  .footer img {
+    width: 150px;
+    height: 50px;
+  }
+
+  .sobre {
+    max-width: 350px;
+  }
+
+  .equipe {
+    width: 350px;
+    height: 200px;
+  }
+
+  .info p {
+    margin: 0;
+    width: 300px;
+  }
+
+  .map {
+    width: 300px;
+    height: 200px;
+  }
+
+  .header {
+    display: none;
+  }
+  .secondHeader {
+    display: none;
+  }
+  .equipeCards {
+    grid-template-columns: 1fr;
+  }
+
+  .mobileHeader {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel-container,
+  .img-carousel {
+    width: 300px;
+    height: 200px;
+  }
+
+  .photoDescMobile {
+    display: unset;
+  }
+
+  .img-carousel {
+    opacity: 0.5;
+  }
+}
