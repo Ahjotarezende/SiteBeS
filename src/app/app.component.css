@@ -233,7 +233,7 @@ mat-icon {
 .footer {
   margin-top: 5rem;
   width: 100%;
-  height: 200px;
+  height: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -309,8 +309,8 @@ mat-icon {
   }
 
   .footer img {
-    width: 150px;
-    height: 50px;
+    width: 140px;
+    height: 40px;
   }
 
   .sobre {
